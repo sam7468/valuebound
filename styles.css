@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg-body{
+    position: fixed;
+    top: -10px;
+    left: -15px;
+    filter: blur(10px) grayscale(15%);
+}
+
+.fixed-size{
+    position: absolute;
+    height: 500px;
+    width: 1600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 300px;
+    max-width: 1600px;
+    border: .5px solid rgb(111, 127, 138);
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: rgb(22, 32, 49);
+    border-radius: 10px 10px 10px 10px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:rgb(22, 32, 49);
+    border-radius: 50px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #2e4d58 0%, #161a31 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 50px;
+ 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(43, 61, 70); 
+  }
+
+header{
+    height: 200px;
+    max-width: 1600px;
+}
+
+.bg img{
+    position: relative;
+    z-index: 1;
+    height: 200px;
+    width: 100%;
+    filter: grayscale(40%);
+}
+
+.on-image-details{
+    display: flex;
+    position:relative;
+    flex-direction: row;
+    top: -220px;
+    justify-content:space-between;
+    padding-left: 110px;
+    padding-right: 110px;
+    left: 0;
+    z-index: 5;
+}
+
+.profile-pic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    min-width: 400px;
+}
+
+.profile-pic img{
+    height: 170px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 6px 9px 49px -12px rgba(0,2,8,0.67);
+    
+}
+
+.profile-pic h2{
+    padding-left: 30px;  
+    font-weight: 500;
+    letter-spacing: 2px;
+    color:rgb(59, 79, 114);
+    font-size: 4rem;
+    opacity: 0.7;
+    font-family: 'Poiret One', cursive; 
+}
+
+.profile-pic span{
+    font-weight: 300;
+    font-size: 6rem;
+    opacity: .9;
+}
+
+.details{
+    display: flex;
+    padding: 10px;
+    min-width: 400px;
+    padding-top: 22px;
+    align-items: center;
+}
+
+.details ul{
+    list-style: none;
+}
+
+.details li{
+    padding: 5px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Poiret One', cursive;
+    font-size: 1rem;
+    color:rgb(59, 79, 114);
+    opacity: .8;
+}
+
+.details a{
+    text-decoration: none;
+    color:rgb(59, 79, 114);
+}
+
+.skill-list,.project-list{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40px;
+    color: rgb(220, 229, 255);
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 3px;
+    opacity: .8;
+}
+
+.skill-list span{
+    transition: all ease-in-out .5s;
+    color: rgb(107,175,169);
+
+}
+
+.skill-list span:hover{
+    font-size: 2rem;
+}
+
+.project-list h5 , .skill-list h5{
+    color: rgb(107,175,169);
+    font-size: 1rem;
+    opacity: 0.9;
+    padding-bottom:15px;
+    border-bottom: .1px solid rgb(49, 85, 85) ;
+}
+
+
+
+.project-list a{
+    text-decoration:none;
+    color: rgb(220, 229, 255);
+
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    float: left;
+    width: 40%;
+    border-right:.1px solid rgb(41, 52, 71) ;
+}
+
+.skills h2,.projects h2{
+    font-family: 'Poiret One', cursive;
+    color: rgb(146, 159, 182);
+    letter-spacing: .2em;
+    padding-bottom:30px;
+    border-bottom: .5px solid rgb(49, 85, 85) ;
+    transition: ease .5s;
+}
+
+
+.skills h2:hover,.projects h2:hover{
+    letter-spacing: .5em;
+    opacity: .8;
+}
+
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    float: right;
+    margin-top: 20px;
+    width: 59%;
+}
+
+.proj-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 600px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .fixed-size{
+        width: 300px;
+    }
+
+    .on-image-details {
+        flex-direction: column;
+    }
+
+    .details {
+        position: fixed;
+        top: 60px;
+        left: 165px;
+    }
+
+    .skills h2,.projects h2{
+        font-size: .9rem;
+    }
+
+    .profile-pic img {
+        position: relative;
+        top: 36px;
+        height: 100px;
+    }
+    .on-image-details{
+        top: -195px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .details li {
+        letter-spacing: 0px;
+        font-size: .5rem;
+        margin-left: -100px;
+        opacity: .7;
+    }
+
+    .profile-pic span {
+        font-size: 2rem;
+    }
+
+    .skill-list h5,.project-list h5{
+        letter-spacing: -.9px;
+        font-size: .6rem;
+    }
+    .profile-pic h2 {
+        padding-left: 5px;
+        font-size: 1.2rem;
+    } 
+
+    .skill-list, .project-list{
+        font-size: .4rem;
+    }
+
+    .skill-list p{
+        margin-top: -3px;
+        font-size: .6rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .fixed-size{
+        width: 600px;
+    }
+    .on-image-details{
+        top: -200px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .details li {
+        letter-spacing: 0px;
+        font-size: .7rem;
+        margin-left: -100px;
+    }
+
+    .profile-pic span {
+        font-size: 3rem;
+    }
+
+    .skill-list h5,.project-list h5{
+        letter-spacing: -.5px;
+    }
+    .profile-pic h2 {
+        font-size: 2rem;
+    } 
+}
+
+@media only screen and (min-width: 900px) {
+    .on-image-details{
+        top: -228px;
+        padding-left: 40px;
+    }
+    .details li {
+        letter-spacing: 0px;
+        font-size: .9rem;
+        margin-left: 0px;
+    }
+
+    .profile-pic span {
+        font-size: 4rem;
+    }
+    .fixed-size{
+        width: 900px;
+    }
+
+    .profile-pic h2 {
+        font-size: 3rem;
+    }  
+}
+
+@media only screen and (min-width: 1270px) {
+    .on-image-details{
+        top: -207px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .details li {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+    .fixed-size{
+        width: 1200px;
+    }
+
+    .profile-pic h2 {
+        font-size: 3rem;
+    }    
+    .profile-pic span {
+        font-size: 6rem;
+    }
+    
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1620px) {
+        .fixed-size{
+        width: 1600px;
+    }
+    .details li {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+    .on-image-details{
+        top: -220px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    .profile-pic h2 {
+        font-size: 4rem;
+    }  
+    .profile-pic span {
+        font-size: 6rem;
+    }
+    .skill-list h5,.project-list h5{
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+}
